@@ -1,0 +1,13 @@
+Step 1. Create Oracle Directory - create directory file_dir as "c:\files"
+Step 2. Grant All on the directory to your app schema  - grant all on directory file_dir to "my_schema" 
+Step 3. Run the scrpit below on the database
+        @install.sql
+
+Sample 
+begin
+file_upload_api.upload_file(p_filename => ,    -- filename
+							 p_mimetype => ,   -- mimetype
+							 p_blob => ,       -- file blob
+							 p_dir_name =>     -- directory name
+							 );
+end;					
