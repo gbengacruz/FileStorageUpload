@@ -2,7 +2,8 @@
 File Upload to Local Disk
 <p> Step 1. Create Oracle Directory - create directory file_dir as "c:\files"  </p>
 <p> Step 2. Grant All on the directory to your app schema  - grant all on directory file_dir to "my_schema" </p>
-<p> Step 3. Run the scrpit below on the database </p>
+<p> Step 3. grant execute on UTL_FILE to  "my_schema"  </p>
+<p> Step 4. Run the scrpit below on the database </p>
         <p> @install.sql </p>
 
 <p> Sample  </p>
