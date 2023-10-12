@@ -18,7 +18,7 @@ create or replace package body file_upload_api as
 	begin
 	    l_key := file_upload_seq.NEXTVAL;
 		insert into t_upload_file_log(upload_name,mime_type)
-		values(l_key ||'_'||p_filename,p_mimetype);
+		values(p_filename,p_mimetype);
 
 		l_blob      :=   p_blob;
 		l_blob_len  := dbms_lob.getlength(l_blob);
